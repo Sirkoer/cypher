@@ -6,7 +6,6 @@
 package vigenere_cipher;
 
 import java.util.Scanner;
-import java.io.IOException;
 import java.lang.Exception;
 /**
  *
@@ -28,6 +27,7 @@ public class CypherClassControllerGenerator {
             if(keyword.length()> message.length()){
                 throw new Exception();
             }
+            scanner.close();
             controller.setCypherClassKeyword(keyword);
             controller.setCypherClassMessageDecode(message);
             controller.setCypherClassMessageEncode(message);
