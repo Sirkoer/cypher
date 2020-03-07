@@ -11,6 +11,10 @@ import java.lang.Exception;
  * @author arek
  */
 public class ControllerCreationError extends Exception  {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     public ControllerCreationError(String message) {
         super(message);
     }

@@ -25,6 +25,7 @@ public class CypherClassControllerGenerator {
             System.out.println("Input keyword to use for  decoding/encoding: ");
             String keyword = scanner.next();
             if(keyword.length()> message.length()){
+                scanner.close();
                 throw new Exception();
             }
             scanner.close();
