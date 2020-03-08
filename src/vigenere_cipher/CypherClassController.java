@@ -50,6 +50,18 @@ public class CypherClassController {
     public void updateViewDecoded(){
         view.printStateEncoded(this.model.getMessageDecode(), this.model.getKeyword(), this.model.getDecoded());
     }
+    public void createDataForSetup(){
+        try{
+        String message = this.view.getDataToEncodeDecode();
+        String keyword =this.view.getKeywordString();
+        this.model.setKeyword(keyword);
+        this.model.setMessageEncode(message);
+        this.model.setMessageDecode(message);
+        }catch(Exception e){
+
+        }
+
+    }
 
 
 }

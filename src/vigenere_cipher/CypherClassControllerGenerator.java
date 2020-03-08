@@ -18,20 +18,6 @@ public class CypherClassControllerGenerator {
             CypherClass model= new CypherClass();
             CypherClassView view = new CypherClassView(); 
             CypherClassController controller = new CypherClassController(model,view);
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Creating new controller...");
-            System.out.println("Input message to decode/encode: ");
-            String message = scanner.next();
-            System.out.println("Input keyword to use for  decoding/encoding: ");
-            String keyword = scanner.next();
-            if(keyword.length()> message.length()){
-                scanner.close();
-                throw new Exception();
-            }
-            scanner.close();
-            controller.setCypherClassKeyword(keyword);
-            controller.setCypherClassMessageDecode(message);
-            controller.setCypherClassMessageEncode(message);
             return controller;
        }catch(Exception e){
            throw new ControllerCreationError("Couldnt create controller");
